@@ -254,6 +254,8 @@ class OptionsMenu extends MusicBeatState
 
 		if (!inMenu)
 		{
+			androidaccept = false;
+			
 			if(-1 * Math.floor(FlxG.mouse.wheel) != 0)
 			{
 				curSelected -= 1 * Math.floor(FlxG.mouse.wheel);
