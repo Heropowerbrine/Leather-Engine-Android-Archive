@@ -63,8 +63,10 @@ class TitleState extends MusicBeatState
                 #if android
 		FlxG.android.preventDefaultKeys = [BACK];
 		#end
-		MusicBeatState.windowNameSuffix = "";
 
+                #if !android
+		MusicBeatState.windowNameSuffix = "";
+		#end
 		if (!firstTimeStarting)
 		{
 			persistentUpdate = true;
@@ -78,8 +80,9 @@ class TitleState extends MusicBeatState
 			PolymodHandler.loadMods();
 			#end
 
+                	#if !android
 			MusicBeatState.windowNamePrefix = Assets.getText(Paths.txt("windowTitleBase", "preload"));
-
+			#end
 			NoteVariables.init();
 
 			Options.fixBinds();
