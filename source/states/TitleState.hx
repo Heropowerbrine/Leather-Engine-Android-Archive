@@ -83,6 +83,7 @@ class TitleState extends MusicBeatState
                 	#if !android
 			MusicBeatState.windowNamePrefix = Assets.getText(Paths.txt("windowTitleBase", "preload"));
 			#end
+
 			NoteVariables.init();
 
 			Options.fixBinds();
