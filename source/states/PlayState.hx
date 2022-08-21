@@ -71,6 +71,8 @@ import substates.GameOverSubstate;
 import game.Highscore;
 import openfl.utils.Assets as OpenFlAssets;
 import android.flixel.FlxHitbox;
+import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 
@@ -2876,8 +2878,8 @@ class PlayState extends MusicBeatState
 			var time = Date.now().getTime();
 			var json:String = Json.stringify(replay.convertToSwag());
 
-			#if sys
-			File.saveContent(SUtil.getPath() + ("assets/replays/replay-" + SONG.song.toLowerCase() + "-" + storyDifficultyStr.toLowerCase() + "-" + time + ".json", json)
+			#if android
+			File.saveContent("assets/replays/replay-" + SONG.song.toLowerCase() + "-" + storyDifficultyStr.toLowerCase() + "-" + time + ".json", json);
 			#end
 		}
 	}
@@ -4543,7 +4545,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		else
-			CoolUtil.coolError("The character " + event[3] + " isn't in any character cache!\nHow did this happen? ¯|_(ツ)_|¯",
+			CoolUtil.coolError("The character " + event[3] + " isn't in any character cache!\nHow did this happen? Â¯|_(ãƒ„)_|Â¯",
 				"Leather Engine's No Crash, We Help Fix Stuff Tool");
 
 		addBgStuff();
