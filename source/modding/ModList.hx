@@ -45,4 +45,3 @@ class ModList
 			modList = utilities.Options.getData("modlist", "modlist");
 	}
 }
-#end
