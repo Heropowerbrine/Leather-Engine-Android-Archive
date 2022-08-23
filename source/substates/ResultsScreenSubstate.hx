@@ -83,7 +83,7 @@ class ResultsScreenSubstate extends MusicBeatSubstate
 
         @:privateAccess
         if(FlxG.keys.justPressed.SHIFT && !PlayState.playingReplay && !PlayState.instance.hasUsedBot #if android || _virtualpad.buttonB.justPressed #end) 
-           SUtil.getPath() + PlayState.instance.saveReplay();
+           PlayState.instance.saveReplay();
 
         @:privateAccess
         if(FlxG.keys.justPressed.ESCAPE && !PlayState.playingReplay && !PlayState.instance.hasUsedBot #if android || _virtualpad.buttonC.justPressed #end)
