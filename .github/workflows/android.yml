@@ -3,17 +3,7 @@
 name: Leather Android
 
 # Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+on: [workflow_dispatch]
 jobs:
   cleaner:
     runs-on: ubuntu-latest
@@ -22,7 +12,6 @@ jobs:
         run: |
           echo "Cleaning up previous run"
           rm -rf "${{ github.workspace }}"
-  # This workflow contains a single job called "build"
   buildAndroid:
     name: buildAndroid
     runs-on: ubuntu-latest
@@ -47,7 +36,7 @@ jobs:
       - name: Setup Haxe
         uses: krdlab/setup-haxe@v1.1.5
         with:
-          haxe-version: 4.2.4
+          haxe-version: 4.2.5
 
       - name: Install Haxelib
         run: |
@@ -69,8 +58,8 @@ jobs:
           haxelib list
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
-        
-        - name: Setup Lime
+
+      - name: Setup Lime
         run: |
           haxelib run lime setup -alias -y
           haxelib run lime config ANDROID_SDK $ANDROID_HOME
@@ -79,7 +68,6 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
-        
 
       - name: Compile
         run: haxelib run lime build android -armv7 --app-version="4.0.0-${{ github.run_id}}"
