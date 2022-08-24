@@ -4,6 +4,7 @@ package modding;
 import polymod.Polymod;
 #end
 import polymod.Polymod;
+import modding.ModList;
 
 class PolymodHandler
 {
@@ -49,7 +50,7 @@ class PolymodHandler
         for(metadata in tempArray)
         {
             metadataArrays.push(metadata.id);
-            ModList.modMetadatas.set(metadata.id, metadata);
+            SUtil.getPath() + ModList.modMetadatas.set(metadata.id, metadata);
         }
     }
 }
