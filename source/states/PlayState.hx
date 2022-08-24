@@ -2880,7 +2880,6 @@ class PlayState extends MusicBeatState
 
 			#if android
 			File.saveContent("assets/replays/replay-" + SONG.song.toLowerCase() + "-" + storyDifficultyStr.toLowerCase() + "-" + time + ".json", json);
-			SUtil.applicationAlert('Done!', 'Replay Saved Successfully!');
 			#end
 		}
 	}
