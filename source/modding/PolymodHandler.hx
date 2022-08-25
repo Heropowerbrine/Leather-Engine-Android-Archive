@@ -50,7 +50,7 @@ class PolymodHandler
         for(metadata in tempArray)
         {
             metadataArrays.push(metadata.id);
-            SUtil.getPath() + ModList.modMetadatas.set(metadata.id, metadata);
+            ModList.modMetadatas.set(metadata.id, metadata);
         }
     }
 }
