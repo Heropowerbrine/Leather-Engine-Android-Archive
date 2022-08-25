@@ -1,6 +1,5 @@
 package ui;
 
-
 import polymod.backends.PolymodAssets;
 import openfl.display.BitmapData;
 import lime.utils.Assets;
