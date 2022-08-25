@@ -1,10 +1,14 @@
 package ui;
 
-#if sys
+#if android
 import sys.io.File;
 import openfl.display.BitmapData;
 import flixel.FlxSprite;
+#end
 
+import sys.io.File;
+import openfl.display.BitmapData;
+import flixel.FlxSprite;
 class ModIcon extends FlxSprite
 {
 	/**
