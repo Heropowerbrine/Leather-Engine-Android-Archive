@@ -40,4 +40,3 @@ class ModIcon extends FlxSprite
 			setPosition(sprTracker.x + sprTracker.width + 10, sprTracker.y - 30);
 	}
 }
-#end
