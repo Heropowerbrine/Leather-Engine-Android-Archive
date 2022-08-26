@@ -6,6 +6,7 @@ import substates.ResetScoreSubstate;
 import utilities.Discord.DiscordClient;
 #end
 import sys.FileSystem;
+import sys.io.File;
 import flixel.system.FlxSound;
 import lime.app.Application;
 import flixel.tweens.FlxTween;
