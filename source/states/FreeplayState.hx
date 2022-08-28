@@ -25,6 +25,7 @@ import flixel.tweens.FlxEase;
 import modding.PolymodHandler;
 import modding.ModList;
 import sys.FileSystem;
+import sys.io.File;
 
 using StringTools;
 
