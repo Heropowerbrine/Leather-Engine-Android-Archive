@@ -5,8 +5,7 @@ import substates.ResetScoreSubstate;
 #if discord_rpc
 import utilities.Discord.DiscordClient;
 #end
-import sys.FileSystem;
-import sys.io.File;
+
 import flixel.system.FlxSound;
 import lime.app.Application;
 import flixel.tweens.FlxTween;
@@ -25,6 +24,7 @@ import lime.utils.Assets;
 import flixel.tweens.FlxEase; 
 import modding.PolymodHandler;
 import modding.ModList;
+import sys.FileSystem;
 
 using StringTools;
 
@@ -97,7 +97,7 @@ class FreeplayState extends MusicBeatState
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
 
-		var initSonglist:String = SUtil.getPath() + 'freeplaySonglist.txt';
+		var initSonglist = SUtil.getPath() + CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 
 		#if discord_rpc
 		// Updating Discord Rich Presence
