@@ -43,7 +43,7 @@ class Paths
 		return if (library == "preload" || library == "default") getPreloadPath(file); else getLibraryPathForce(file, library);
 
 	inline static function getLibraryPathForce(file:String, library:String)
-		return SUtil.getPath() + '$library:assets/$library/$file';
+		return '$library:assets/$library/$file';
 
 	inline static function getPreloadPath(file:String)
 		return SUtil.getPath() + 'assets/$file';
@@ -67,7 +67,7 @@ class Paths
 		return getPath('data/$key.json', TEXT, library);
 
 	static public function video(key:String, ?ext:String = VIDEO_EXT)
-		return SUtil.getPath() + 'assets/videos/$key.$ext';
+		return 'assets/videos/$key.$ext';
 
 	static public function sound(key:String, ?library:String)
 		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
@@ -86,7 +86,7 @@ class Paths
 				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT';
 		}
 
-		return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
+		return 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
 	}
 
 	static public function inst(song:String, ?difficulty:String)
@@ -97,7 +97,7 @@ class Paths
 				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT';
 		}
 		
-		return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 	}
 
 	static public function songEvents(song:String, ?difficulty:String)
@@ -115,7 +115,7 @@ class Paths
 		return getPath('images/$key.png', IMAGE, library);
 
 	inline static public function font(key:String)
-		return SUtil.getPath() + 'assets/fonts/$key';
+		return 'assets/fonts/$key';
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
 	{
