@@ -43,10 +43,10 @@ class Paths
 		return if (library == "preload" || library == "default") getPreloadPath(file); else getLibraryPathForce(file, library);
 
 	inline static function getLibraryPathForce(file:String, library:String)
-		return '$library:assets/$library/$file';
+		return SUtil.getPath() + '$library:assets/$library/$file';
 
 	inline static function getPreloadPath(file:String)
-		return 'assets/$file';
+		return SUtil.getPath() + 'assets/$file';
 
 	inline static public function lua(key:String,?library:String)
 		return getPath('data/$key.lua', TEXT, library);
@@ -83,10 +83,10 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists('songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT'))
-				return 'songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT';
+				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT';
 		}
 
-		return 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
+		return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
 	}
 
 	static public function inst(song:String, ?difficulty:String)
@@ -94,10 +94,10 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists('songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT'))
-				return 'songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT';
+				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT';
 		}
 		
-		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
+		return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
 	}
 
 	static public function songEvents(song:String, ?difficulty:String)
@@ -105,7 +105,7 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists(Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}')))
-				return Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}');
+				return SUtil.getPath() + Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}');
 		}
 
 		return Paths.json("song data/" + song.toLowerCase() + "/events");
@@ -115,7 +115,7 @@ class Paths
 		return getPath('images/$key.png', IMAGE, library);
 
 	inline static public function font(key:String)
-		return 'assets/fonts/$key';
+		return SUtil.getPath() + 'assets/fonts/$key';
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
 	{
