@@ -70,7 +70,7 @@ class Paths
 		return SUtil.getPath() + 'assets/videos/$key.$ext';
 
 	static public function sound(key:String, ?library:String)
-		return getPath'sounds/$key.$SOUND_EXT', SOUND, library);
+		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
 
 	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String)
 		return sound(key + FlxG.random.int(min, max), library);
