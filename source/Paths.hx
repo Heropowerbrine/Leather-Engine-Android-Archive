@@ -46,7 +46,7 @@ class Paths
 		return '$library:assets/$library/$file';
 
 	inline static function getPreloadPath(file:String)
-		return SUtil.getPath() + 'assets/$file';
+		return 'assets/$file';
 
 	inline static public function lua(key:String,?library:String)
 		return getPath('data/$key.lua', TEXT, library);
@@ -70,7 +70,7 @@ class Paths
 		return SUtil.getPath() + 'assets/videos/$key.$ext';
 
 	static public function sound(key:String, ?library:String)
-		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
+		return SUtil.getPath() + 'sounds/$key.$SOUND_EXT', SOUND, library);
 
 	inline static public function soundRandom(key:String, min:Int, max:Int, ?library:String)
 		return sound(key + FlxG.random.int(min, max), library);
@@ -83,7 +83,7 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists('songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT'))
-				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT';
+				return 'songs:assets/songs/${song.toLowerCase()}/Voices-$difficulty.$SOUND_EXT';
 		}
 
 		return 'songs:assets/songs/${song.toLowerCase()}/Voices.$SOUND_EXT';
@@ -94,7 +94,7 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists('songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT'))
-				return SUtil.getPath() + 'songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT';
+				return 'songs:assets/songs/${song.toLowerCase()}/Inst-$difficulty.$SOUND_EXT';
 		}
 		
 		return 'songs:assets/songs/${song.toLowerCase()}/Inst.$SOUND_EXT';
@@ -105,7 +105,7 @@ class Paths
 		if(difficulty != null)
 		{
 			if(Assets.exists(Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}')))
-				return SUtil.getPath() + Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}');
+				return Paths.json("song data/" + song.toLowerCase() + '/events-${difficulty.toLowerCase()}');
 		}
 
 		return Paths.json("song data/" + song.toLowerCase() + "/events");
