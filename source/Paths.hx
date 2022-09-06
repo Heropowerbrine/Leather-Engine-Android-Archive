@@ -67,7 +67,7 @@ class Paths
 		return getPath('data/$key.json', TEXT, library);
 
 	static public function video(key:String, ?ext:String = VIDEO_EXT)
-		return 'assets/videos/$key.$ext';
+		return SUtil.getPath() + 'assets/videos/$key.$ext';
 
 	static public function sound(key:String, ?library:String)
 		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
@@ -115,7 +115,7 @@ class Paths
 		return getPath('images/$key.png', IMAGE, library);
 
 	inline static public function font(key:String)
-		return 'assets/fonts/$key';
+		return SUtil.getPath() + 'assets/fonts/$key';
 
 	inline static public function getSparrowAtlas(key:String, ?library:String)
 	{
