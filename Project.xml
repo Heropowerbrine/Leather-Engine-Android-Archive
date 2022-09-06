@@ -108,6 +108,7 @@
 	<!--Packages-->
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" />
+	<!--Fix some polymod 1.5.3+ errors lol (needs hscript 2.5.0 i think???)-->
         <haxedef name="hscriptPos"/>
 
 	<haxelib name="flixel-ui" />
