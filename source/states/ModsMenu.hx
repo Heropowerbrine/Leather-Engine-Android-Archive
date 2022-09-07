@@ -1,6 +1,5 @@
 package states;
 
-#if sys
 import ui.ModIcon;
 import modding.ModList;
 import modding.PolymodHandler;
