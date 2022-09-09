@@ -474,7 +474,7 @@ class StoryMenuState extends MusicBeatState
 
 	function loadJSON(name:String)
 	{
-		var group:StoryGroup = cast Json.parse(Assets.getText(Paths.json("week data/" + name)));
+		var group:StoryGroup = cast Json.parse(Assets.getText(SUtil.getPath() + Paths.json("week data/" + name)));
 
 		for(week in group.weeks)
 		{
