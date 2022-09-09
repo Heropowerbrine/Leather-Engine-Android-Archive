@@ -15,9 +15,9 @@ class NoteVariables
 
     public static function init()
     {
-        Note_Count_Directions = CoolUtil.coolTextFileOfArrays(SUtil.getPath() + Paths.txt("mania data/maniaDirections"));
-        Default_Binds = CoolUtil.coolTextFileOfArrays(SUtil.getPath() + Paths.txt("mania data/defaultBinds"));
-        Other_Note_Anim_Stuff = CoolUtil.coolTextFileOfArrays(SUtil.getPath() + Paths.txt("mania data/maniaAnimationDirections"));
-        Character_Animation_Arrays = CoolUtil.coolTextFileOfArrays(SUtil.getPath() + Paths.txt("mania data/maniaCharacterAnimations"));
+        Note_Count_Directions = CoolUtil.coolTextFileOfArrays(Paths.txt("mania data/maniaDirections"));
+        Default_Binds = CoolUtil.coolTextFileOfArrays(Paths.txt("mania data/defaultBinds"));
+        Other_Note_Anim_Stuff = CoolUtil.coolTextFileOfArrays(Paths.txt("mania data/maniaAnimationDirections"));
+        Character_Animation_Arrays = CoolUtil.coolTextFileOfArrays(Paths.txt("mania data/maniaCharacterAnimations"));
     }
 }
