@@ -51,7 +51,7 @@ jobs:
           haxelib install hscript 2.5.0
           haxelib install flixel-addons
           haxelib install hxCodec
-          haxelib install polymod 1.5.4
+          haxelib install polymod 1.6.0
           haxelib git linc_luajit https://github.com/MAJigsaw77/linc_luajit.git
           haxelib git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools.git
           haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
