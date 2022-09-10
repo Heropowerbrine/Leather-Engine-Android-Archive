@@ -98,7 +98,7 @@ class FreeplayState extends MusicBeatState
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
 
-		var initSonglist = CoolUtil.coolTextFile + Paths.txt('freeplaySonglist'));
+		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 
 		#if discord_rpc
 		// Updating Discord Rich Presence
