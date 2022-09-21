@@ -33,7 +33,8 @@ class CoolUtil
 
 	public static function coolTextFile(path:String):Array<String>
 	{
-		var daList:Array<String> = Assets.getText(path).trim().split('\n');
+		var daList:Array<String> = 
+                var daList = File.getContent(SUtil.getPath() + path).trim().split('\n');
 
 		for (i in 0...daList.length)
 		{
