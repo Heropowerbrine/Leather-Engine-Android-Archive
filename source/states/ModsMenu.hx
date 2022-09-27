@@ -134,10 +134,6 @@ class ModsMenu extends MusicBeatState
 			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 		}
 
-                if (controls.ACCEPT)
-                {
-                        androidaccept = true;
-                }
 
 		if (controls.UP_P)
 		{
