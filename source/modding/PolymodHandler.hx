@@ -9,7 +9,7 @@ class PolymodHandler
     private static final MOD_DIR:String = 'mods';
 
 
-    public static function loadMods(folders:Array<String>):Void
+    public static function loadMods()
     {
         loadModMetadata();
 
