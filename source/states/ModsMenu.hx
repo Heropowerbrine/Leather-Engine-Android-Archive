@@ -116,7 +116,7 @@ class ModsMenu extends MusicBeatState
 
 		for(modId in PolymodHandler.metadataArrays)
 		{
-			var modOption = new ModOption(ModHandler.modMetadatas.get(modId).title, modId, optionLoopNum);
+			var modOption = new ModOption(ModList.modMetadatas.get(modId).title, modId, optionLoopNum);
 			page.add(modOption);
 			optionLoopNum++;
 		}
@@ -137,22 +137,7 @@ class ModsMenu extends MusicBeatState
                 if (controls.ACCEPT)
                 {
                         androidaccept = true;
-                        
-                  if (!FlxG.save.data.disabledMods.contains(ModHandler.trackedMods[curSelected].id))
-			{
-				FlxG.save.data.disabledMods.push(ModHandler.trackedMods[curSelected].id);
-				FlxG.save.flush();
-				changeSelection();
-				changedSomething = !changedSomething;
-			}
-			else
-			{
-				FlxG.save.data.disabledMods.remove(ModHandler.trackedMods[curSelected].id);
-				FlxG.save.flush();
-				changeSelection();
-				changedSomething = !changedSomething;
-			}
-		 }
+                }
 
 		if (controls.UP_P)
 		{
@@ -168,8 +153,6 @@ class ModsMenu extends MusicBeatState
 
 		if (controls.BACK)
 		{
-		    if (changedSomething)
-				ModHandler.reload();
 			PolymodHandler.loadMods();
 			FlxG.switchState(new MainMenuState());
 		}
