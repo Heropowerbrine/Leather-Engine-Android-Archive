@@ -1,21 +1,20 @@
 package modding;
 
-#if polymod
-import polymod.Polymod;
-#end
 import polymod.Polymod;
 import modding.ModList;
 
 class PolymodHandler
 {
     public static var metadataArrays:Array<String> = [];
+    private static final MOD_DIR:String = 'mods';
 
-    public static function loadMods()
+
+    public static function loadMods(folders:Array<String>):Void
     {
         loadModMetadata();
 
 		Polymod.init({
-			modRoot:SUtil.getPath() + "mods/",
+			modRoot: SUtil.getPath() + MOD_DIR,
 			dirs: ModList.getActiveMods(metadataArrays),
             framework: OPENFL,
 			errorCallback: function(error:PolymodError)
