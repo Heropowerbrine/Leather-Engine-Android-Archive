@@ -13,7 +13,7 @@ import polymod.format.ParseRules;
  * Class based from Kade Engine.
  * Credits: KadeDev.
  */
-class ModCore
+class Modhandler
 {
 	private static final API_VER:String = '1.0.0';
 	private static final MOD_DIR:String = 'mods';
