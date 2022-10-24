@@ -171,7 +171,6 @@ class ModsMenu extends MusicBeatState
 		}
 
 		super.update(elapsed);
-	}
 
 		if (curSelected < 0)
 			curSelected = page.length - 1;
