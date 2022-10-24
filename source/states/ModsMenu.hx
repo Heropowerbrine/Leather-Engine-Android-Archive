@@ -168,7 +168,6 @@ class ModsMenu extends MusicBeatState
 				FlxG.save.flush();
 				changeSelection();
 			}
-		}
 
 		super.update(elapsed);
 
