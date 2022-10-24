@@ -58,7 +58,7 @@ class Modhandler
 		trace('Reloading Polymod...');
 		loadMods(getMods());
 		#else
-		trace("Polymod reloading is not supported on your Platform!")
+		trace("Polymod reloading is not supported on your Platform!");
 		#end
 	}
 
