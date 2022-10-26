@@ -63,8 +63,8 @@ class SUtil
 			if (!FileSystem.exists(SUtil.getPath() + 'mods'))
 				FileSystem.createDirectory(SUtil.getPath() + 'mods');
 
-			if (!FileSystem.exists(SUtil.getPath() + 'mods/modpacks-goes-here.txt'))
-				File.saveContent(SUtil.getPath() + 'mods/modpacks-goes-here.txt', '');
+			if (!FileSystem.exists(SUtil.getPath() + 'mods/mods-goes-here.txt'))
+				File.saveContent(SUtil.getPath() + 'mods/mods-goes-here.txt', '');
 		}
 		#end
 	}
