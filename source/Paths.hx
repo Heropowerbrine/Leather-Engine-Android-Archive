@@ -41,6 +41,10 @@ class Paths
 
 	static public function getLibraryPath(file:String, library = "preload")
 		return if (library == "preload" || library == "default") getPreloadPath(file); else getLibraryPathForce(file, library);
+	
+	inline static public function mods(key:String = '') {
+		return SUtil.getPath() + 'mods/' + key;
+	}
 
 	inline static function getLibraryPathForce(file:String, library:String)
 		return '$library:assets/$library/$file';
