@@ -149,25 +149,14 @@ class ModsMenu extends MusicBeatState
 
 		if (controls.BACK)
 		{
-			ModHandler.reload();
+			PolymodHandler.loadMods();
 			FlxG.switchState(new MainMenuState());
 		}
-                else if (controls.ACCEPT)
-		{       
+		
+                if (controls.ACCEPT)
+                {
                         androidaccept = true;
                 }
-			if (!FlxG.save.data.disabledMods.contains(ModHandler.trackedMods[curSelected].id))
-			{
-				FlxG.save.data.disabledMods.push(ModHandler.trackedMods[curSelected].id);
-				FlxG.save.flush();
-				changeSelection();
-			}
-			else
-			{
-				FlxG.save.data.disabledMods.remove(ModHandler.trackedMods[curSelected].id);
-				FlxG.save.flush();
-				changeSelection();
-			}
 
 		super.update(elapsed);
 
