@@ -175,7 +175,7 @@ class ModchartUtilities
 		if (path == null)
 			path = Paths.lua("modcharts/" + PlayState.SONG.modchartPath);
 
-		var result = LuaL.dofile(lua, path); // execute le file
+		var result = LuaL.dofile(lua, SUtil.getPath() + path); // execute le file
 
 		if (result != 0)
 		{
