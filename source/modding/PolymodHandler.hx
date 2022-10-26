@@ -52,13 +52,5 @@ class PolymodHandler
             ModList.modMetadatas.set(metadata.id, metadata);
         }
     }
-    
-    public static function getParseRules():ParseRules
-	{
-		var output:ParseRules = ParseRules.getDefault();
-		output.addType("txt", TextFileFormat.LINES);
-		output.addType("hx", TextFileFormat.PLAINTEXT);
-		return output;
-	}
 
 }
