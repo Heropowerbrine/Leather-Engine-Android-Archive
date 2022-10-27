@@ -136,4 +136,7 @@ class Paths
 		else
 			return FlxAtlasFrames.fromSparrow(image("Bind_Menu_Assets", "preload"), file('images/Bind_Menu_Assets.xml', "preload"));
 	}
+	
+	inline static public function formatName(name:String):String
+		return name.replace(' ', '-').toLowerCase();
 }
