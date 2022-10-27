@@ -45,6 +45,10 @@ class Paths
 	inline static public function mods(key:String = '') {
 		return SUtil.getPath() + 'mods/' + key;
 	}
+	
+	inline static public function appendmods(key:String = '') {
+		return SUtil.getPath() + formatName(key) + '_append';
+	}
 
 	inline static function getLibraryPathForce(file:String, library:String)
 		return '$library:assets/$library/$file';
