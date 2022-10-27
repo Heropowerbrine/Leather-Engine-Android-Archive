@@ -134,6 +134,10 @@ class ModsMenu extends MusicBeatState
 			FlxG.sound.play(Paths.sound('scrollMenu'), 0.4);
 		}
 
+		if (controls.ACCEPT)
+                {
+                        androidaccept = true;
+                }
 
 		if (controls.UP_P)
 		{
@@ -152,11 +156,6 @@ class ModsMenu extends MusicBeatState
 			PolymodHandler.loadMods();
 			FlxG.switchState(new MainMenuState());
 		}
-		
-                if (controls.ACCEPT)
-                {
-                        androidaccept = true;
-                }
 
 		super.update(elapsed);
 
