@@ -8,6 +8,8 @@ import openfl.utils.Assets as OpenFlAssets;
 import sys.io.File;
 import sys.FileSystem;
 
+using StringTools;
+
 class Paths
 {
 	inline public static var SOUND_EXT = #if web "mp3" #else "ogg" #end;
