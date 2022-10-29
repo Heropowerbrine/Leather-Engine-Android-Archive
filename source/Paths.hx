@@ -145,4 +145,23 @@ class Paths
 	
 	inline static public function formatName(name:String):String
 		return name.replace(' ', '-').toLowerCase();
+	
+	function recursiveLoop(directory:String = "path/to/") {
+  if (sys.FileSystem.exists(directory)) {
+    trace("directory found: " + directory);
+    for (file in sys.FileSystem.readDirectory(directory)) {
+      var path = haxe.io.Path.join([directory, file]);
+      if (!sys.FileSystem.isDirectory(path)) {
+        trace("file found: " + path);
+        // do something with file
+      } else {
+        var directory = haxe.io.Path.addTrailingSlash(path);
+        trace("directory found: " + directory);
+        recursiveLoop(directory);
+      }
+    }
+  } else {
+    trace('"$directory" does not exists');
+  }
+}
 }
