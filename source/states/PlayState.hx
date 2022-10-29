@@ -2880,7 +2880,7 @@ class PlayState extends MusicBeatState
 			var json:String = Json.stringify(replay.convertToSwag());
 
 			#if android
-			File.saveContent("assets/replays/replay-" + SONG.song.toLowerCase() + "-" + storyDifficultyStr.toLowerCase() + "-" + time + ".json", json);
+			File.saveContent(SUtil.getPath() + "assets/replays/replay-" + SONG.song.toLowerCase() + "-" + storyDifficultyStr.toLowerCase() + "-" + time + ".json", json);
 			#end
 		}
 	}
