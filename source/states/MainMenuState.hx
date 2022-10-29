@@ -29,7 +29,7 @@ class MainMenuState extends MusicBeatState
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'options', 'mods', 'replays'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'options', 'mods',]; //fixes two replays bug because it already unlocks when pressing c
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
