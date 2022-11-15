@@ -49,7 +49,7 @@ class Paths
 	}
 	
 	inline static public function appendmods(key:String = '') {
-		return '_append';
+		return '_append' + key;
 	}
 
 	inline static function getLibraryPathForce(file:String, library:String)
