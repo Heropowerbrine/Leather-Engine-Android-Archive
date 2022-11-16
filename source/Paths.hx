@@ -149,7 +149,7 @@ class Paths
 	inline static public function formatName(name:String):String
 		return name.replace(' ', '-').toLowerCase();
 	
-	inline static public function recursiveLoop(directory:String) {
+	inline static public function recursiveLoop(directory:String = "path/to/") {
           if (sys.FileSystem.exists(directory)) {
             trace("directory found: " + directory);
             for (file in sys.FileSystem.readDirectory(directory)) {
