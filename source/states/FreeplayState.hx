@@ -98,7 +98,7 @@ class FreeplayState extends MusicBeatState
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
 		
-		var moddirectory = Paths.recursiveLoop(Paths.mods)
+		var moddirectory = Paths.recursiveLoop(Paths.mods);
                 
 		var initSonglist = CoolUtil.coolTextFile(Paths.mods(moddirectory(Paths.appendmods(Paths.modtxt('freeplaySonglist')))));
 
