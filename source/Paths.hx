@@ -70,8 +70,8 @@ class Paths
 	inline static public function txt(key:String, ?library:String)
 		return getPath('data/$key.txt', TEXT, library);
 	
-	inline static public function modtxt(key:String, ?library:String)
-		return ('data/$key.txt', TEXT, library);
+	inline static public function modtxt(key:String)
+		return 'data/$key.txt'
 
 	inline static public function xml(key:String, ?library:String)
 		return getPath('data/$key.xml', TEXT, library);
