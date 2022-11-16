@@ -49,7 +49,7 @@ class Paths
 	}
 	
 	inline static public function appendmods(key:String = '') {
-		return '_append' + key;
+		return '_append/' + key;
 	}
 
 	inline static function getLibraryPathForce(file:String, library:String)
@@ -69,6 +69,9 @@ class Paths
 
 	inline static public function txt(key:String, ?library:String)
 		return getPath('data/$key.txt', TEXT, library);
+	
+	inline static public function modtxt(key:String, ?library:String)
+		return ('data/$key.txt', TEXT, library);
 
 	inline static public function xml(key:String, ?library:String)
 		return getPath('data/$key.xml', TEXT, library);
