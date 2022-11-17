@@ -44,7 +44,7 @@ class Paths
 	static public function getLibraryPath(file:String, library = "preload")
 		return if (library == "preload" || library == "default") getPreloadPath(file); else getLibraryPathForce(file, library);
 	
-	inline static public function mods(key:String = '', directory:String) {
+	inline static public function mods(key:String = '', ?directory:String) {
 		return SUtil.getPath() + 'mods/' + directory + '/' + key;
 	}
 	
