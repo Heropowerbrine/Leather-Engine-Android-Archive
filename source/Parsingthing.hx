@@ -23,7 +23,7 @@ typedef SwagSongs =
 	var colors:Array<Int>;
 }
 
-class Week
+class Parsingthing
 {
 	public static var currentLoadedWeeks:Map<String, SwagWeek> = [];
 	public static var weeksList:Array<String> = [];
