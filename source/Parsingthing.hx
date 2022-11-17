@@ -2,6 +2,7 @@ package;
 
 import openfl.utils.Assets;
 import haxe.Json;
+import utilities.CoolUtil;
 
 typedef SwagWeek =
 {
