@@ -97,8 +97,8 @@ class FreeplayState extends MusicBeatState
 
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
-
-		var initSonglist = CoolUtil.coolTextFile(Paths.mods(Paths.appendmods(Paths.modtxt('freeplaySonglist'))));
+		
+		Parsingthing.loadJsons(false);
 
 		#if discord_rpc
 		// Updating Discord Rich Presence
@@ -106,12 +106,12 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		// Loops through all songs in freeplaySonglist.txt
-		for (i in 0...initSonglist.length)
+		for (i in 0...Parsingthing.weeksList.length)
 		{
-			if(initSonglist[i].trim() != "")
+			if(Parsingthing.weeksList.length[i].trim() != "")
 			{
 				// Creates an array of their strings
-				var listArray = initSonglist[i].split(":");
+				var listArray = Parsingthing.weeksList.length[i].split(":");
 
 				// Variables I like yes mmmm tasty
 				var week = Std.parseInt(listArray[2]);
