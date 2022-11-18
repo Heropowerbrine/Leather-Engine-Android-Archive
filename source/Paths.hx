@@ -160,7 +160,7 @@ class Paths
               } else {
                 var directory = haxe.io.Path.addTrailingSlash(path);
                 trace("directory found: " + directory);
-                recursiveLoop(directory);
+		return directory
               }
             }
           } else {
