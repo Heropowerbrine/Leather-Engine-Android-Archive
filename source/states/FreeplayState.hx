@@ -108,10 +108,10 @@ class FreeplayState extends MusicBeatState
 		// Loops through all songs in freeplaySonglist.txt
 		for (i in 0...Parsingthing.weeksList.length)
 		{
-			if(Parsingthing.weeksList.length[i].trim() != "")
+			if(Parsingthing.weeksList[i].trim() != "")
 			{
 				// Creates an array of their strings
-				var listArray = Parsingthing.weeksList.length[i].split(":");
+				var listArray = Parsingthing.weeksList[i].split(":");
 
 				// Variables I like yes mmmm tasty
 				var week = Std.parseInt(listArray[2]);
