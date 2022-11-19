@@ -34,24 +34,24 @@ class HealthIcon extends TrackerSprite
 		antialiasing = true;
 
 		if(
-			Assets.exists(Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml") ||
-			Assets.exists(Paths.image('icons/icon-' + char).split(".png")[0] + ".xml") ||
-			Assets.exists(Paths.image('icons/' + char).split(".png")[0] + ".xml")
+			Assets.exists(SUtil.getPath() + Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml") ||
+			Assets.exists(SUtil.getPath() + Paths.image('icons/icon-' + char).split(".png")[0] + ".xml") ||
+			Assets.exists(SUtil.getPath() + Paths.image('icons/' + char).split(".png")[0] + ".xml")
 		)
 		{
 			var selected = "your";
 
-			if(Assets.exists(Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml"))
+			if(Assets.exists(SUtil.getPath() + Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml"))
 			{
 				frames = Paths.getSparrowAtlas('icons/' + char + '-icons');
 				selected = Paths.image('icons/' + char + '-icons');
 			}
-			else if(Assets.exists(Paths.image('icons/icon-' + char).split(".png")[0] + ".xml"))
+			else if(Assets.exists(SUtil.getPath() + Paths.image('icons/icon-' + char).split(".png")[0] + ".xml"))
 			{
 				frames = Paths.getSparrowAtlas('icons/icon-' + char);
 				selected = Paths.image('icons/icon-' + char);
 			}
-			else if(Assets.exists(Paths.image('icons/' + char).split(".png")[0] + ".xml"))
+			else if(Assets.exists(SUtil.getPath() + Paths.image('icons/' + char).split(".png")[0] + ".xml"))
 			{
 				frames = Paths.getSparrowAtlas('icons/' + char);
 				selected = Paths.image('icons/' + char);
@@ -74,11 +74,11 @@ class HealthIcon extends TrackerSprite
 		}
 		else
 		{
-			if(Assets.exists(Paths.image('icons/' + char + '-icons'))) // LE ICONS
+			if(Assets.exists(SUtil.getPath() + Paths.image('icons/' + char + '-icons'))) // LE ICONS
 				loadGraphic(Paths.image('icons/' + char + '-icons'), true, 150, 150);
-			else if(Assets.exists(Paths.image('icons/' + 'icon-' + char))) // PSYCH ICONS
+			else if(Assets.exists(SUtil.getPath() + Paths.image('icons/' + 'icon-' + char))) // PSYCH ICONS
 				loadGraphic(Paths.image('icons/' + 'icon-' + char), true, 150, 150);
-			else if(Assets.exists(Paths.image('icons/' + char))) // lmao image file names i guess if you're really lazy
+			else if(Assets.exists(SUtil.getPath() + Paths.image('icons/' + char))) // lmao image file names i guess if you're really lazy
 				loadGraphic(Paths.image('icons/' + char), true, 150, 150);
 			else // UNKNOWN ICON
 				loadGraphic(Paths.image('icons/placeholder-icon'), true, 150, 150);
