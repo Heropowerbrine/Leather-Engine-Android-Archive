@@ -1,6 +1,7 @@
 package ui;
 
 import lime.utils.Assets;
+import sys.io.File;
 
 class HealthIcon extends TrackerSprite
 {
