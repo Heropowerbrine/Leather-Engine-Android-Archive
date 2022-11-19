@@ -21,6 +21,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import game.Song;
 import game.Highscore;
+import sys.io.File;
 
 using StringTools;
 
@@ -474,7 +475,7 @@ class StoryMenuState extends MusicBeatState
 
 	function loadJSON(name:String)
 	{
-		var group:StoryGroup = cast Json.parse(Assets.getText(Paths.json("week data/" + name)));
+		var group:StoryGroup = cast Json.parse(File.getContent(Paths.json("week data/" + name)));
 
 		for(week in group.weeks)
 		{
