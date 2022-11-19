@@ -62,7 +62,7 @@ class HealthIcon extends TrackerSprite
 
 			if(sys.FileSystem.exists(selected.split(".png")[0] + ".txt"))
 			{
-				var theFunny = File.getContent(selected.split(".png")[0] + ".txt").split(" ");
+				var theFunny = File.getBytes(selected.split(".png")[0] + ".txt").split(" ");
 
 				setGraphicSize(Std.int(width * Std.parseFloat(theFunny[2])));
 				updateHitbox();
