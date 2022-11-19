@@ -110,7 +110,7 @@ class Song
 		}
 		else
 		{
-			rawJson = Assets.getText(Paths.json("song data/tutorial/tutorial")).trim();
+			rawJson = SUtil.getPath() + Paths.json(folder.toLowerCase + jsonInput.toLowerCase)).trim();
 
 			while (!rawJson.endsWith("}"))
 			{
