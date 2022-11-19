@@ -41,7 +41,7 @@ class HealthIcon extends TrackerSprite
 		{
 			var selected = "your";
 
-			if Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml")
+			if (Paths.image('icons/' + char + '-icons').split(".png")[0] + ".xml")
 			{
 				frames = Paths.getSparrowAtlas('icons/' + char + '-icons');
 				selected = Paths.image('icons/' + char + '-icons');
