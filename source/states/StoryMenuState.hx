@@ -498,7 +498,7 @@ class StoryMenuState extends MusicBeatState
 
 	function loadGroups()
 	{
-		var weeks = CoolUtil.coolTextFile(SUtil.getPath() + Paths.txt("storyWeekList"));
+		var weeks = CoolUtil.coolTextFile(Paths.txt("storyWeekList"));
 
 		for(WeekName in weeks)
 		{
