@@ -112,6 +112,7 @@
         <haxedef name="hscriptPos"/>
 
 	<haxelib name="flixel-ui" />
+	<haxelib name="spine" />
 	<haxelib name="polymod"/>
 	
 	<haxelib name="discord_rpc" if="desktop"/>
