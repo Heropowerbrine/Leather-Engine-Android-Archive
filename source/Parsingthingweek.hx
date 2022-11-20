@@ -23,7 +23,7 @@ typedef SwagSongs =
 	var colors:Array<Int>;
 }
 
-class Parsingthing
+class Parsingthingweek
 {
 	public static var currentLoadedWeeks:Map<String, SwagWeek> = [];
 	public static var weeksList:Array<String> = [];
@@ -33,7 +33,7 @@ class Parsingthing
 		currentLoadedWeeks.clear();
 		weeksList = [];
 
-		final list:Array<String> = CoolUtil.coolTextFile(Paths.txt('_append/data/freeplaySonglist'));
+		final list:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/storyWeekList'));
 		for (i in 0...list.length)
 		{
 			if (!currentLoadedWeeks.exists(list[i]))
