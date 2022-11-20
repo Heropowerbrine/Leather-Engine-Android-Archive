@@ -8,7 +8,7 @@ class JsonReader {
 
     public function new() {}
 
-    inline public function parse(file:FileHandle):JsonValue {
+    inline public static function parse(file:FileHandle):JsonValue {
 
         return new JsonDynamic(Json.parse(file.getContent()));
 
