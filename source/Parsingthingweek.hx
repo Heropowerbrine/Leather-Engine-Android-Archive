@@ -1,4 +1,4 @@
-package;
+/*package;
 
 import openfl.utils.Assets;
 import haxe.Json;
@@ -61,4 +61,4 @@ class Parsingthingweek
 		return Json.parse(rawJson);
 	}
 }
-
+*/
