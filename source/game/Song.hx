@@ -4,6 +4,8 @@ import utilities.NoteVariables;
 import game.Section.SwagSection;
 import haxe.Json;
 import lime.utils.Assets;
+import sys.io.File;
+import sys.FileSystem;
 
 using StringTools;
 
