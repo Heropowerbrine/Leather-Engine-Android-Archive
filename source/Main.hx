@@ -52,8 +52,8 @@ class Main extends Sprite
 
 		if (zoom == -1)
 		{
-			var ratioX:Int = stageWidth / gameWidth;
-			var ratioY:Int = stageHeight / gameHeight;
+			var ratioX:Float = stageWidth / gameWidth;
+			var ratioY:Float = stageHeight / gameHeight;
 
 			zoom = Math.min(ratioX, ratioY);
 
