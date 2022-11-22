@@ -23,6 +23,7 @@ import game.Song;
 import game.Highscore;
 import sys.io.File;
 import sys.FileSystem;
+import spine.support.files.FileHandle;
 
 using StringTools;
 
@@ -476,7 +477,7 @@ class StoryMenuState extends MusicBeatState
 
 	function loadJSON(name:String)
 	{
-		var group:StoryGroup = cast Json.parse(File.getContent(SUtil.getPath() + Paths.json("week data/" + name)));
+		var group:StoryGroup = cast Json.parse(FileHandle.getContent(SUtil.getPath() + Paths.json("week data/" + name)));
 
 		for(week in group.weeks)
 		{
