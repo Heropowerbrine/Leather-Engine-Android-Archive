@@ -65,7 +65,7 @@ class SUtil
 		{
 			if (!FileSystem.exists(SUtil.getPath() + 'assets') && !FileSystem.exists(SUtil.getPath() + 'mods'))
 			{
-				Lib.application.window.alert("Whoops, seems like you didn't extract the files from the .APK!\nPlease copy the files from the .APK to\n" + SUtil.getStorageDirectory(),
+				Lib.application.window.alert("Whoops, seems like you didn't extract the files from the .APK!\nPlease copy the files from the .APK to\n" + SUtil.getPath(),
 					'Error!');
 				LimeSystem.exit(1);
 			}
@@ -80,7 +80,7 @@ class SUtil
 			{
 				if (!FileSystem.exists(SUtil.getPath() + 'assets'))
 				{
-					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/assets folder from the .APK!\nPlease copy the assets/assets folder from the .APK to\n" + SUtil.getStorageDirectory(),
+					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/assets folder from the .APK!\nPlease copy the assets/assets folder from the .APK to\n" + SUtil.getPath(),
 						'Error!');
 					LimeSystem.exit(1);
 				}
@@ -93,7 +93,7 @@ class SUtil
 
 				if (!FileSystem.exists(SUtil.getPath() + 'mods'))
 				{
-					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getStorageDirectory(),
+					Lib.application.window.alert("Whoops, seems like you didn't extract the assets/mods folder from the .APK!\nPlease copy the assets/mods folder from the .APK to\n" + SUtil.getPath(),
 						'Error!');
 					LimeSystem.exit(1);
 				}
