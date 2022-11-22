@@ -68,7 +68,7 @@ class StoryMenuState extends MusicBeatState
 		MusicBeatState.windowNameSuffix = " Story Menu";
 
 		// SETUP THE GROUPS //
-		loadGroups();
+		Parsingthingweek.loadJsons(true);
 
 		// CREATE THE UI //
 		createStoryUI();
@@ -475,41 +475,6 @@ class StoryMenuState extends MusicBeatState
 		yellowBG.color = bgColor;
 	}
 
-	function loadJSON(name:String)
-	{
-		var group:StoryGroup = cast Json.parse(FileHandle.getContent(SUtil.getPath() + Paths.json("week data/" + name)));
-
-		for(week in group.weeks)
-		{
-			var offsets:Map<String, Array<Float>> = [];
-
-			if(week.difficultyOffsets != null)
-			{
-				var week_offsets:Array<Array<Dynamic>> = week.difficultyOffsets;
-
-				for(offset in week_offsets)
-				{
-					offsets.set(offset[0], offset[1]);
-				}
-			}
-
-			week.difficultyOffsets = offsets;
-		}
-
-		groups.push(group);
-	}
-
-	function loadGroups()
-	{
-		var weeks = CoolUtil.coolTextFile(Paths.txt("storyWeekList"));
-
-		for(WeekName in weeks)
-		{
-			loadJSON(WeekName);
-		}
-
-		currentGroup = groups[0];
-	}
 }
 
 typedef StoryGroup =
