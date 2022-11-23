@@ -6,21 +6,19 @@ import utilities.CoolUtil;
 
 typedef SwagWeek =
 {
-	var songs:Array<SwagSongs>;
-	var characters:Array<String>;
-	var name:String;
-	var locked:Bool;
-	var unlockAfter:String;
-	var hideStoryMode:Bool;
-	var hideFreeplay:Bool;
-	var hiddenUntilUnlocked:Bool;
+        var groupName:String;
+        var pathName:String;
+        var weeks:Array<SwagWeeks>;
 }
 
-typedef SwagSongs =
+typedef SwagWeeks =
 {
-	var name:String;
-	var character:String;
-	var colors:Array<Int>;
+        var imagepath:String;
+        var songs:Array:<String>;
+	var characters:Array:<String>;
+        var weekTitle:String;
+	var backgroundColor:Array<Int>;
+        var difficulties:Array:<String>;
 }
 
 class Parsingthingweek
