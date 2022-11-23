@@ -33,12 +33,12 @@ class Parsingthingweek
 		currentLoadedWeeks.clear();
 		weeksList = [];
 
-		final list:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/storyWeekList'));
+		final list:Array<String> = CoolUtil.coolTextFile(Paths.txt('storyWeekList'));
 		for (i in 0...list.length)
 		{
 			if (!currentLoadedWeeks.exists(list[i]))
 			{
-				var week:SwagWeek = parseJson(Paths.json('data/week data/' + list[i]));
+				var week:SwagWeek = parseJson(Paths.json('week data/' + list[i]));
 				if (week != null)
 				{
 					if (week != null && (isStoryMode && !week.hideStoryMode) || (!isStoryMode && !week.hideFreeplay))
