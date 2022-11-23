@@ -14,11 +14,11 @@ typedef SwagWeek =
 typedef SwagWeeks =
 {
         var imagepath:String;
-        var songs:Array:<String>;
-	var characters:Array:<String>;
+        var songs:Array<String>;
+	var characters:Array<String>;
         var weekTitle:String;
 	var backgroundColor:Array<Int>;
-        var difficulties:Array:<String>;
+        var difficulties:Array<String>;
 }
 
 class Parsingthingweek
