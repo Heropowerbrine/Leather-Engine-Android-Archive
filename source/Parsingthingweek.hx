@@ -38,12 +38,9 @@ class Parsingthingweek
 			{
 				var week:SwagWeek = parseJson(Paths.json('week data/' + list[i]));
 				if (week != null)
-				{
-					if (week != null && (isStoryMode && !week.hideStoryMode) || (!isStoryMode && !week.hideFreeplay))
-					{
-						currentLoadedWeeks.set(list[i], week);
-						weeksList.push(list[i]);
-					}
+			        {
+					currentLoadedWeeks.set(list[i], week);
+					weeksList.push(list[i]);
 				}
 			}
 		}
