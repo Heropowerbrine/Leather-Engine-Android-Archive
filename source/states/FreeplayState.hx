@@ -211,7 +211,7 @@ class FreeplayState extends MusicBeatState
 		add(textBG);
 
                 #if android
-		PolymodHandler.loadMods();
+		SUtil.getPath() + PolymodHandler.loadMods();
 		#end
 
 		#if PRELOAD_ALL
