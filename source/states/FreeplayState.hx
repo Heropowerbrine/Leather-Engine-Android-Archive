@@ -120,13 +120,13 @@ class FreeplayState extends MusicBeatState
 			    }
 			}
 		    }
-		return initSonglist;
 		}
                 else
 		{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		return initSonglist;
 		}
+		
+		return initSonglist;
 
 		#if discord_rpc
 		// Updating Discord Rich Presence
