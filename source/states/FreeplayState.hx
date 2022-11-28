@@ -98,9 +98,20 @@ class FreeplayState extends MusicBeatState
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
 		
+		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 		var modList = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
-		
-		var initSonglist = CoolUtil.coolTextFile(Paths.appendmods('freeplaySonglist'), modList);
+		if(modList.length > 0)
+		{
+		    for(mod in modList)
+		    {
+		      var initSonglist = CoolUtil.coolTextFile(Paths.appendmods('freeplaySonglist'), modList);
+		      return initSonglist
+		    }
+		else
+		{
+		      var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		      return initSonglist
+		}
 			
 		#if discord_rpc
 		// Updating Discord Rich Presence
