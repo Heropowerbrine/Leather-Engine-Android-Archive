@@ -105,12 +105,12 @@ class FreeplayState extends MusicBeatState
 		    for(mod in modList)
 		    {
 		      var initSonglist = CoolUtil.coolTextFile(Paths.appendmods('freeplaySonglist'), modList);
-		      return initSonglist
+		      return initSonglist;
 		    }
 		else
 		{
 		      var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		      return initSonglist
+		      return initSonglist;
 		}
 			
 		#if discord_rpc
