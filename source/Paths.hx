@@ -48,8 +48,8 @@ class Paths
 		return SUtil.getPath() + 'mods/' + directory + '/' + key;
 	}
 	
-	inline static public function appendmods(key:String = '') {
-		return '_append/' + key;
+	inline static public function appendmods(key:String = '', ?directory:String) {
+		return SUtil.getPath() + 'mods/' + directory + '/_append/' + key;
 	}
 
 	inline static function getLibraryPathForce(file:String, library:String)
