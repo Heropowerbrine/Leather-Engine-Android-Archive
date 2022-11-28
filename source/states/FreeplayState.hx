@@ -97,23 +97,9 @@ class FreeplayState extends MusicBeatState
 
 		if(FlxG.sound.music == null || !FlxG.sound.music.playing)
 			TitleState.playTitleMusic();
-		
+
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		var modList = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
-		if(modList.length > 0)
-		{
-		    for(mod in modList)
-		    {
-		      var initSonglist = CoolUtil.coolTextFile(Paths.appendmods('freeplaySonglist'), modList);
-		      return initSonglist;
-		    }
-		}
-		else
-		{
-		      var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		      return initSonglist;
-		}
-			
+
 		#if discord_rpc
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
@@ -224,6 +210,9 @@ class FreeplayState extends MusicBeatState
 		textBG.alpha = 0.6;
 		add(textBG);
 
+                #if android
+		PolymodHandler.loadMods();
+		#end
 
 		#if PRELOAD_ALL
 		var leText:String = "Press X to reset song score and rank | Press Y to play Song Audio | C + LEFT and RIGHT to change song speed";
