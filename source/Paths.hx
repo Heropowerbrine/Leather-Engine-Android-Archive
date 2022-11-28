@@ -16,8 +16,6 @@ class Paths
 	inline public static var VIDEO_EXT = "mp4";
 
 	static var currentLevel:String;
-	static public var currentModDirectory:String = '';
-	static public var getGlobalMods = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
 
 	static public function setCurrentLevel(name:String)
 		currentLevel = name.toLowerCase();
@@ -150,22 +148,5 @@ class Paths
 	
 	inline static public function formatName(name:String):String
 		return name.replace(' ', '-').toLowerCase();
-	
-	inline static public function modFolders(key:String) {
-		if(currentModDirectory != null && currentModDirectory.length > 0) {
-			var fileToCheck:String = mods(currentModDirectory + '/' + key);
-			if(FileSystem.exists(fileToCheck)) {
-				return fileToCheck;
-			}
-		}
-
-		for(mod in getGlobalMods()){
-			var fileToCheck:String = mods(mod + '/' + key);
-			if(FileSystem.exists(fileToCheck))
-				return fileToCheck;
-
-		}
-		return SUtil.getPath() + 'mods/' + key;
-	}
 
 }
