@@ -100,7 +100,7 @@ class FreeplayState extends MusicBeatState
 		
 		var modList = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
 		
-		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		var initSonglist = CoolUtil.coolTextFile(Paths.mods(Paths.appendmods(Paths.modtxt('freeplaySonglist'))), modList);
 			
 		#if discord_rpc
 		// Updating Discord Rich Presence
