@@ -16,6 +16,7 @@ class Paths
 	inline public static var VIDEO_EXT = "mp4";
 
 	static var currentLevel:String;
+	static public var currentModDirectory:String = '';
 
 	static public function setCurrentLevel(name:String)
 		currentLevel = name.toLowerCase();
