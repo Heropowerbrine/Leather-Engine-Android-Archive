@@ -100,33 +100,8 @@ class FreeplayState extends MusicBeatState
 		
 		var modList = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
 		
-		if(modList.length > 0)
-		{
-		var initSonglist:Array<String> = [];
-		    for(mod in modList)
-		    {
-			if(sys.FileSystem.exists(SUtil.getPath() + Sys.getCwd() + "mods/" + mod + "/_append/data/"))
-			{
-			    var modSyssonglist = sys.FileSystem.readDirectory(SUtil.getPath() + Sys.getCwd() + "mods/" + mod + "/_append/data/");
-
-			    if(modSyssonglist.length > 0)
-			    {
-				for(Name in modSyssonglist)
-				{
-				    if(Name.startsWith("freeplaySonglist"))
-					initSonglist.push(Name.split(".txt")[0]);
-				}
-			    }
-			}
-		    }
-		return initSonglist;
-		}
-                else
-		{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		return initSonglist;
-		}
-
+			
 		#if discord_rpc
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
