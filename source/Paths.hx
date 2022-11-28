@@ -17,6 +17,7 @@ class Paths
 
 	static var currentLevel:String;
 	static public var currentModDirectory:String = '';
+	static public var getGlobalMods = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
 
 	static public function setCurrentLevel(name:String)
 		currentLevel = name.toLowerCase();
