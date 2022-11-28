@@ -107,6 +107,7 @@ class FreeplayState extends MusicBeatState
 		      var initSonglist = CoolUtil.coolTextFile(Paths.appendmods('freeplaySonglist'), modList);
 		      return initSonglist;
 		    }
+		}
 		else
 		{
 		      var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
