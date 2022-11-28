@@ -100,10 +100,9 @@ class FreeplayState extends MusicBeatState
 		
 		var modList = modding.ModList.getActiveMods(modding.PolymodHandler.metadataArrays);
 		
-		var initSonglist:Array<String> = [];
-		
 		if(modList.length > 0)
 		{
+		var initSonglist:Array<String> = [];
 		    for(mod in modList)
 		    {
 			if(sys.FileSystem.exists(SUtil.getPath() + Sys.getCwd() + "mods/" + mod + "/_append/data/"))
@@ -120,13 +119,13 @@ class FreeplayState extends MusicBeatState
 			    }
 			}
 		    }
+		return initSonglist;
 		}
                 else
 		{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-		}
-		
 		return initSonglist;
+		}
 
 		#if discord_rpc
 		// Updating Discord Rich Presence
