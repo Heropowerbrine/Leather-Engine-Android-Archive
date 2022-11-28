@@ -125,6 +125,7 @@ class FreeplayState extends MusicBeatState
                 else
 		{
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
+		return initSonglist;
 		}
 
 		#if discord_rpc
