@@ -149,22 +149,21 @@ class Paths
 	inline static public function formatName(name:String):String
 		return name.replace(' ', '-').toLowerCase();
 	
-	inline static public function recursiveLoop(directory:String = '') {
-          if (sys.FileSystem.exists(directory)) {
-            trace("directory found: " + directory);
-            for (file in sys.FileSystem.readDirectory(directory)) {
-              var path = haxe.io.Path.join([directory, file]);
-              if (!sys.FileSystem.isDirectory(path)) {
-                trace("file found: " + path);
-                // do something with file
-              } else {
-                var directory = haxe.io.Path.addTrailingSlash(path);
-                trace("directory found: " + directory);
-		recursiveLoop(directory);
-              }
-            }
-          } else {
-            trace('"$directory" does not exists');
-          }
-        }
+	inline static public function modFolders(key:String) {
+		if(currentModDirectory != null && currentModDirectory.length > 0) {
+			var fileToCheck:String = mods(currentModDirectory + '/' + key);
+			if(FileSystem.exists(fileToCheck)) {
+				return fileToCheck;
+			}
+		}
+
+		for(mod in getGlobalMods()){
+			var fileToCheck:String = mods(mod + '/' + key);
+			if(FileSystem.exists(fileToCheck))
+				return fileToCheck;
+
+		}
+		return SUtil.getPath() + 'mods/' + key;
+	}
+
 }
