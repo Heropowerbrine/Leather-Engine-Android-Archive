@@ -214,6 +214,8 @@ class FreeplayState extends MusicBeatState
 		PolymodHandler.loadMods();
 		#end
 
+        PolymodHandler.loadMods();
+        
 		#if PRELOAD_ALL
 		var leText:String = "Press X to reset song score and rank | Press Y to play Song Audio | C + LEFT and RIGHT to change song speed";
 		#else
